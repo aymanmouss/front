@@ -9,11 +9,11 @@ export class CommentsService {
   constructor(private apiService: ApiService) {}
 
   getComments(postId: number) {
-    return this.apiService.get<Comment[]>(`/posts/${postId}`);
+    return this.apiService.get<Comment[]>(`comments/${postId}`);
   }
   postComment(createCommentRequest: CreateCommentRequest) {
     return this.apiService.post<Comment>(
-      '/posts/comments',
+      'comments/comments',
       createCommentRequest
     );
   }

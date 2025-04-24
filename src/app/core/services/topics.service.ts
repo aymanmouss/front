@@ -9,10 +9,10 @@ export class TopicsService {
   constructor(private apiService: ApiService) {}
 
   getTopics() {
-    return this.apiService.get<topicResponse[]>('/topics');
+    return this.apiService.get<topicResponse[]>('topics');
   }
 
   postTopic(topic: CreateTopicRequest) {
-    return this.apiService.post<topicResponse>('/topics', topic);
+    return this.apiService.post<topicResponse>('topics', topic);
   }
 }

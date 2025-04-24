@@ -10,9 +10,9 @@ export class SubscriptionService {
   constructor(private apiService: ApiService) {}
 
   getSubscription(subscription: subscriptionRequest) {
-    return this.apiService.post<Subscription>('/subscriptions', subscription);
+    return this.apiService.post<Subscription>('subscriptions', subscription);
   }
   deleteSubscription(topicId: subscriptionRequest) {
-    return this.apiService.delete<String>('/subscriptions', topicId);
+    return this.apiService.delete<String>('subscriptions', topicId);
   }
 }
